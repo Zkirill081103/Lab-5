@@ -4,8 +4,6 @@ import java.util.Scanner;
 public class FilesData {
     public static void main(String[] args) {
         try{
-// Создание исходного файла numIsh.txt и запись в него чисел типа float
-
             File f1=new File("E:\\My\\numIsh.txt");
             f1.createNewFile();
 
@@ -23,14 +21,11 @@ public class FilesData {
 
             wr.flush();
             wr.close();
-// Создание файла numRez.txt и переписывание в него чисел из numIsh.txt
             File f2=new File("E:\\My\\numRez.txt");
             f2.createNewFile();
-            // поток для чтения из исходного файла numIsh.txt
             DataInputStream rd =
                     new DataInputStream(new FileInputStream(f1.getAbsolutePath()));
-
-            // поток для записи в результирующий файл numRez.txt
+            
             wr = new DataOutputStream(new FileOutputStream(f2.getAbsolutePath()));
 
             try{
